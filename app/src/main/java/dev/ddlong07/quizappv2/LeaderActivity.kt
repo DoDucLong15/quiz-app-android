@@ -1,29 +1,23 @@
 package dev.ddlong07.quizappv2
 
-import android.app.Notification.Action
 import android.os.Bundle
-import android.view.Window
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import dev.ddlong07.quizappv2.databinding.ActivityMainBinding
+import dev.ddlong07.quizappv2.databinding.ActivityLeaderBinding
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+class LeaderActivity : AppCompatActivity() {
+    lateinit var binding: ActivityLeaderBinding //lateinit not null value
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityLeaderBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val window: Window = this@MainActivity.window
-        window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
     }
 }
