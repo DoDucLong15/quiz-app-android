@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/white_background"
+    android:layout_margin="8dp"
+    android:gravity="center"
+    android:elevation="3dp">
+
+    <TextView
+        android:id="@+id/rowTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_margin="16dp"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        app:shapeAppearanceOverlay="@style/circleImageview"
+        app:strokeColor="#AE844F"
+        app:strokeWidth="2dp"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Text view"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/garnet"/>
+
+    <TextView
+        android:id="@+id/scoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/navy_blue"
+        android:text="0000"/>
+</LinearLayout>
