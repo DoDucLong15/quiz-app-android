@@ -1,6 +1,6 @@
-package dev.ddlong07.quizappv2
+package dev.ddlong07.quizappv2.activity
 
-import android.app.Notification.Action
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import dev.ddlong07.quizappv2.R
 import dev.ddlong07.quizappv2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -25,5 +26,14 @@ class MainActivity : AppCompatActivity() {
 
         val window: Window = this@MainActivity.window
         window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
+
+        binding.apply {
+            menu.setItemSelected(R.id.home)
+            menu.setOnItemSelectedListener {
+                if(it == R.id.board) {
+                    startActivity(Intent(this@MainActivity, LeaderActivity::class.java))
+                }
+            }
+        }
     }
 }
